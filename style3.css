@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1a1a1a;
+    font-family: 'poppins',sans-serif;
+    color: #fff;
+}
+.services{
+    width: 1300px;
+    padding: 30px 60px;
+    margin: auto;
+}
+.services h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    position: relative;
+    font-weight: 600;
+}
+.services h1:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background-color: #fff;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card{
+    width: calc(34% - 22px);
+    background:#1a1a1a;
+    color: #ffffff;
+    padding: 45px 30px;
+    margin: 0 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: 3s;
+    position: relative;
+    box-shadow: rgba(70, 70, 75, 0.25) 0px 50px 100px -20px, rgba(84, 80, 80, 0.3) 0px 30px 60px -30px, rgba(85, 87, 90, 0.35) 0px -2px 6px 0px inset;
+}
+.sbox i{
+    font-size: 36px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 15px;
+    transition: 0.5s;
+    border: 2px solid #460e77;
+
+}
+.sbox h3{
+    font-size: 25px;
+}
+.sbox p{
+    margin: 20px 0;
+}
+.sbox a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    background:  #997aff;
+    padding: 7px 15px;
+    border-radius: 18px;
+    transition: 0.5s;
+    margin: 20px 0;
+    border: 2px solid #997aff;
+}
+.sbox a:hover{
+    background: transparent;
+    
+    transform: scale(1.2);
+    background:#333;
+}
+.card:hover .sbox i{
+    background: #997aff;
+    color: #fff;
+    bottom: 2px solid #1a1a1a;
+}
+.card:after{
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.card:hover:after{
+    transform: rotate(13deg);
+    background:linear-gradient(#0b497e, #460e77);
+
+}
+@media only screen and (max-width: 1024px) {
+  .services {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  .card {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+}
